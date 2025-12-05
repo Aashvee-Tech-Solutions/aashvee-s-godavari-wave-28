@@ -51,18 +51,17 @@ const TestimonialsSlider = () => {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden hero-gradient">
       {/* Background */}
-      <div className="absolute inset-0 hero-gradient" />
-      <div className="absolute inset-0 grid-pattern opacity-10" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full ai-gradient-border text-primary text-sm font-semibold mb-4 animate-fade-in-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-4 animate-fade-in-up">
             Testimonials
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground animate-fade-in-up delay-100">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
         </div>
@@ -72,22 +71,22 @@ const TestimonialsSlider = () => {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 rounded-full glass flex items-center justify-center text-foreground hover:bg-primary/20 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 rounded-full bg-white border border-border shadow-md flex items-center justify-center text-foreground hover:bg-primary/10 transition-colors"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 rounded-full glass flex items-center justify-center text-foreground hover:bg-primary/20 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 rounded-full bg-white border border-border shadow-md flex items-center justify-center text-foreground hover:bg-primary/10 transition-colors"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
           {/* Testimonial Card */}
-          <div className="glass rounded-3xl p-8 md:p-12 text-center animate-fade-in-up delay-200">
+          <div className="bg-white rounded-3xl p-8 md:p-12 text-center border border-border shadow-lg animate-fade-in-up delay-200">
             {/* Quote Icon */}
-            <div className="w-16 h-16 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-ai-magenta flex items-center justify-center">
-              <Quote className="w-8 h-8 text-primary-foreground" />
+            <div className="w-16 h-16 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <Quote className="w-8 h-8 text-white" />
             </div>
 
             {/* Quote Text */}

@@ -31,19 +31,19 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden bg-card/30">
+    <section className="py-20 relative overflow-hidden bg-white">
       {/* Background */}
-      <div className="absolute inset-0 dot-pattern opacity-30" />
+      <div className="absolute inset-0 dot-pattern opacity-40" />
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-ai-magenta/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full ai-gradient-border text-primary text-sm font-semibold mb-4 animate-fade-in-up">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-4 animate-fade-in-up">
             Our Clients
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up delay-100">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground animate-fade-in-up delay-100">
             Trusted by <span className="text-gradient">Industry Leaders</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in-up delay-200">
@@ -56,14 +56,11 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div
               key={client.name}
-              className="group relative p-8 rounded-2xl glass card-lift text-center animate-fade-in-up"
+              className="group relative p-8 rounded-2xl bg-white border border-border shadow-sm hover:shadow-lg hover:border-primary/30 text-center animate-fade-in-up card-lift transition-all duration-300"
               style={{ animationDelay: `${index * 100 + 300}ms` }}
             >
-              {/* Glow on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-ai-magenta/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
               {/* Icon */}
-              <div className="relative w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-ai-magenta/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="relative w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <client.icon className="w-8 h-8 text-primary" />
               </div>
 
@@ -77,7 +74,7 @@ const ClientsSection = () => {
                     href={`https://${client.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 text-xs text-primary hover:text-ai-magenta transition-colors"
+                    className="inline-block mt-3 text-xs text-primary hover:text-accent transition-colors"
                   >
                     {client.website}
                   </a>
@@ -91,7 +88,7 @@ const ClientsSection = () => {
         <div className="mt-16 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
             {[...clients, ...clients, ...clients].map((client, i) => (
-              <span key={i} className="mx-8 text-2xl font-display font-bold text-muted/30">
+              <span key={i} className="mx-8 text-2xl font-display font-bold text-muted-foreground/20">
                 {client.name}
               </span>
             ))}

@@ -11,9 +11,9 @@ const services = [
 
 const ServicesBanner = () => {
   return (
-    <section className="relative py-6 overflow-hidden bg-gradient-to-r from-primary via-ai-magenta to-accent">
+    <section className="relative py-6 overflow-hidden bg-gradient-to-r from-primary via-accent to-primary">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)] animate-shimmer" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent)] animate-shimmer" style={{ backgroundSize: '200% 100%' }} />
       
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
@@ -21,7 +21,7 @@ const ServicesBanner = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all cursor-default"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 hover:bg-white/25 transition-all cursor-default"
             >
               <service.icon className="w-4 h-4 text-white" />
               <span className="text-sm font-medium text-white whitespace-nowrap">{service.label}</span>

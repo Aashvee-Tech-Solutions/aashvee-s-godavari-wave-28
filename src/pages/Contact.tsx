@@ -33,7 +33,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Us | Aashvee Tech Solutions - Get in Touch</title>
-        <meta name="description" content="Contact Aashvee Tech Solutions for AI solutions, web development, mobile apps, and digital transformation. Located in Andhra Pradesh, India." />
+        <meta name="description" content="Contact Aashvee Tech Solutions for AI solutions, web development, mobile apps, and digital transformation. Located in Rajahmundry, Andhra Pradesh, India." />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -42,14 +42,14 @@ const Contact = () => {
         <main className="pt-24">
           {/* Hero Section */}
           <section className="py-20 relative overflow-hidden hero-gradient">
-            <div className="absolute inset-0 neural-pattern opacity-30" />
+            <div className="absolute inset-0 dot-pattern opacity-40" />
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-3xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full ai-gradient-border text-sm font-semibold mb-6 animate-fade-in-up">
-                  <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-                  <span className="text-gradient">Let's Connect</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold mb-6 animate-fade-in-up">
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-primary">Let's Connect</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up delay-100">
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground animate-fade-in-up delay-100">
                   Start Your <span className="text-gradient">AI Journey</span>
                 </h1>
                 <p className="text-xl text-muted-foreground animate-fade-in-up delay-200">
@@ -65,25 +65,23 @@ const Contact = () => {
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Info */}
                 <div className="animate-slide-in-left">
-                  <h2 className="font-display text-3xl font-bold mb-8">
+                  <h2 className="font-display text-3xl font-bold mb-8 text-foreground">
                     Get in <span className="text-gradient">Touch</span>
                   </h2>
                   
                   <div className="space-y-6 mb-12">
                     {[
-                      { icon: MapPin, label: 'Address', value: 'Andhra Pradesh, India', color: 'primary' },
-                      { icon: Phone, label: 'Phone', value: '+91 98765 43210', color: 'magenta' },
-                      { icon: Mail, label: 'Email', value: 'info@aashveetech.com', color: 'accent' },
-                      { icon: Clock, label: 'Hours', value: 'Mon - Sat: 9:00 AM - 6:00 PM', color: 'primary' },
+                      { icon: MapPin, label: 'Address', value: 'Rajahmundry, Andhra Pradesh, India', color: 'primary' },
+                      { icon: Phone, label: 'Phone', value: '+91 98765 43210', color: 'accent' },
+                      { icon: Mail, label: 'Email', value: 'info@aashveetech.com', color: 'primary' },
+                      { icon: Clock, label: 'Hours', value: 'Mon - Sat: 9:00 AM - 6:00 PM', color: 'accent' },
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-4 p-4 rounded-2xl glass">
+                      <div key={index} className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-border shadow-sm">
                         <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                          item.color === 'primary' ? 'bg-primary/20' :
-                          item.color === 'magenta' ? 'bg-ai-magenta/20' : 'bg-accent/20'
+                          item.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'
                         }`}>
                           <item.icon className={`w-6 h-6 ${
-                            item.color === 'primary' ? 'text-primary' :
-                            item.color === 'magenta' ? 'text-ai-magenta' : 'text-accent'
+                            item.color === 'primary' ? 'text-primary' : 'text-accent'
                           }`} />
                         </div>
                         <div>
@@ -95,8 +93,8 @@ const Contact = () => {
                   </div>
 
                   {/* Quick Services */}
-                  <div className="p-6 rounded-2xl glass">
-                    <h3 className="font-display font-bold mb-4">Quick Services</h3>
+                  <div className="p-6 rounded-2xl bg-white border border-border shadow-sm">
+                    <h3 className="font-display font-bold mb-4 text-foreground">Quick Services</h3>
                     <div className="flex flex-wrap gap-2">
                       {['AI Solutions', 'Web Development', 'Mobile Apps', 'CMS Software', 'Dashboards', 'Cloud'].map((service) => (
                         <span key={service} className="px-3 py-1.5 rounded-full text-sm bg-primary/10 text-primary">
@@ -109,31 +107,31 @@ const Contact = () => {
 
                 {/* Contact Form */}
                 <div className="animate-slide-in-right delay-200">
-                  <form onSubmit={handleSubmit} className="p-8 rounded-3xl glass">
-                    <h3 className="font-display text-2xl font-bold mb-6">Send us a Message</h3>
+                  <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-white border border-border shadow-sm">
+                    <h3 className="font-display text-2xl font-bold mb-6 text-foreground">Send us a Message</h3>
                     
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">Name *</label>
+                        <label className="block text-sm font-medium mb-2 text-foreground">Name *</label>
                         <input
                           type="text"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors"
                           placeholder="Your name"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Email *</label>
+                        <label className="block text-sm font-medium mb-2 text-foreground">Email *</label>
                         <input
                           type="email"
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -141,36 +139,36 @@ const Contact = () => {
 
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">Phone</label>
+                        <label className="block text-sm font-medium mb-2 text-foreground">Phone</label>
                         <input
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors"
                           placeholder="+91 00000 00000"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Company</label>
+                        <label className="block text-sm font-medium mb-2 text-foreground">Company</label>
                         <input
                           type="text"
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors"
                           placeholder="Your company"
                         />
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <label className="block text-sm font-medium mb-2">Service Interested In</label>
+                      <label className="block text-sm font-medium mb-2 text-foreground">Service Interested In</label>
                       <select
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors"
                       >
                         <option value="">Select a service</option>
                         <option value="ai">AI Solutions</option>
@@ -184,19 +182,19 @@ const Contact = () => {
                     </div>
 
                     <div className="mb-6">
-                      <label className="block text-sm font-medium mb-2">Message *</label>
+                      <label className="block text-sm font-medium mb-2 text-foreground">Message *</label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         required
                         rows={4}
-                        className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none transition-colors resize-none"
                         placeholder="Tell us about your project..."
                       />
                     </div>
 
-                    <Button type="submit" variant="hero" size="xl" className="w-full group">
+                    <Button type="submit" size="xl" className="w-full group bg-primary hover:bg-primary/90">
                       Send Message
                       <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
