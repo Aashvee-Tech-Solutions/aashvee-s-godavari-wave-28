@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import PartnersMarquee from '@/components/PartnersMarquee';
+import ServicesBanner from '@/components/ServicesBanner';
+import ClientsSection from '@/components/ClientsSection';
+import AIProductsSection from '@/components/AIProductsSection';
 import ServicesSection from '@/components/ServicesSection';
 import StatsSection from '@/components/StatsSection';
-import AboutSection from '@/components/AboutSection';
-import PortfolioSection from '@/components/PortfolioSection';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
 import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -14,9 +15,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Aashvee Tech Solutions | Web Development, Mobile Apps & Digital Marketing</title>
-        <meta name="description" content="Aashvee Tech Solutions - Your perfect digital partner for web development, mobile app development, digital marketing, and cloud solutions. Transform your business today." />
-        <meta name="keywords" content="web development, mobile app development, digital marketing, UI/UX design, cloud hosting, Aashvee Tech" />
+        <title>Aashvee Tech Solutions | First AI Company in Andhra Pradesh</title>
+        <meta name="description" content="Aashvee Tech Solutions - Pioneering AI innovation in Andhra Pradesh. Custom software, web development, mobile apps, CMS, dashboards, and AI-powered solutions." />
+        <meta name="keywords" content="AI company Andhra Pradesh, artificial intelligence, web development, mobile apps, CMS software, dashboards, data learning, Aashvee Tech" />
         <link rel="canonical" href="https://aashveetech.com" />
       </Helmet>
 
@@ -24,11 +25,12 @@ const Index = () => {
         <Navbar />
         <main>
           <HeroSection />
-          <PartnersMarquee />
+          <ServicesBanner />
+          <ClientsSection />
+          <AIProductsSection />
           <ServicesSection />
           <StatsSection />
-          <AboutSection />
-          <PortfolioSection />
+          <TestimonialsSlider />
           <TeamSection />
           <ContactSection />
         </main>
