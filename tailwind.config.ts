@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Orbitron', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Syne', 'sans-serif'],
+        body: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,11 +51,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        glow: "hsl(var(--glow))",
-        neon: {
-          blue: "hsl(var(--neon-blue))",
-          cyan: "hsl(var(--neon-cyan))",
-          purple: "hsl(var(--neon-purple))",
+        ai: {
+          purple: "hsl(var(--ai-purple))",
+          magenta: "hsl(var(--ai-magenta))",
+          gold: "hsl(var(--ai-gold))",
+          cyan: "hsl(var(--ai-cyan))",
+          dark: "hsl(var(--ai-dark))",
         },
       },
       borderRadius: {
