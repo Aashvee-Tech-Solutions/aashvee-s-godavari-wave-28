@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Our Location',
-    details: ['Hyderabad, Telangana', 'India - 500001'],
+    details: ['Rajahmundry, Andhra Pradesh', 'India'],
     color: 'primary'
   },
   {
@@ -52,19 +52,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-card/30">
+    <section id="contact" className="py-24 relative overflow-hidden bg-muted/30">
       {/* Background */}
-      <div className="absolute inset-0 hex-pattern opacity-20" />
+      <div className="absolute inset-0 dot-pattern opacity-30" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-4">
             Get In Touch
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Let's Build Your <span className="text-gradient">Digital Future</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -79,11 +79,11 @@ const ContactSection = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up"
+                  className="p-6 rounded-2xl bg-white border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in-up card-lift"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className={`w-12 h-12 rounded-xl mb-4 flex items-center justify-center ${
-                    info.color === 'primary' ? 'bg-primary/20' : 'bg-accent/20'
+                    info.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'
                   }`}>
                     <info.icon className={`w-6 h-6 ${
                       info.color === 'primary' ? 'text-primary' : 'text-accent'
@@ -98,19 +98,19 @@ const ContactSection = () => {
             </div>
 
             {/* Map placeholder */}
-            <div className="h-64 rounded-2xl bg-card border border-border overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+            <div className="h-64 rounded-2xl bg-white border border-border overflow-hidden shadow-sm">
+              <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-primary/50 mx-auto mb-2" />
-                  <p className="text-muted-foreground">Hyderabad, India</p>
+                  <p className="text-muted-foreground font-medium">Rajahmundry, Andhra Pradesh</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-3xl bg-card border border-border animate-fade-in-up delay-200">
-            <h3 className="font-display text-2xl font-bold mb-6">Send Us a Message</h3>
+          <div className="p-8 rounded-3xl bg-white border border-border shadow-sm animate-fade-in-up delay-200">
+            <h3 className="font-display text-2xl font-bold mb-6 text-foreground">Send Us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -121,7 +121,7 @@ const ContactSection = () => {
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="John Doe"
                     required
-                    className="bg-background/50 border-border focus:border-primary"
+                    className="bg-muted/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
@@ -132,7 +132,7 @@ const ContactSection = () => {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="john@example.com"
                     required
-                    className="bg-background/50 border-border focus:border-primary"
+                    className="bg-muted/50 border-border focus:border-primary"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="bg-background/50 border-border focus:border-primary"
+                    className="bg-muted/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
@@ -154,7 +154,7 @@ const ContactSection = () => {
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="Project Inquiry"
                     required
-                    className="bg-background/50 border-border focus:border-primary"
+                    className="bg-muted/50 border-border focus:border-primary"
                   />
                 </div>
               </div>
@@ -167,11 +167,11 @@ const ContactSection = () => {
                   placeholder="Tell us about your project..."
                   rows={5}
                   required
-                  className="bg-background/50 border-border focus:border-primary resize-none"
+                  className="bg-muted/50 border-border focus:border-primary resize-none"
                 />
               </div>
 
-              <Button type="submit" variant="hero" size="lg" className="w-full group">
+              <Button type="submit" size="lg" className="w-full group bg-primary hover:bg-primary/90">
                 Send Message
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>

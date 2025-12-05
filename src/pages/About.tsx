@@ -18,35 +18,35 @@ const About = () => {
         <main className="pt-24">
           {/* Hero Section */}
           <section className="py-20 relative overflow-hidden hero-gradient">
-            <div className="absolute inset-0 neural-pattern opacity-30" />
+            <div className="absolute inset-0 dot-pattern opacity-40" />
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-3xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full ai-gradient-border text-sm font-semibold mb-6 animate-fade-in-up">
-                  <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-                  <span className="text-gradient">First AI Company in Andhra Pradesh</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold mb-6 animate-fade-in-up">
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-primary">First AI Company in Andhra Pradesh</span>
                 </div>
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up delay-100">
-                  Pioneering <span className="text-gradient">AI Innovation</span>
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground animate-fade-in-up delay-100">
+                  Building Things <span className="text-gradient">To Do</span>
                 </h1>
                 <p className="text-xl text-muted-foreground animate-fade-in-up delay-200">
-                  Building the future of technology from Andhra Pradesh to the world.
+                  Building the future of technology from Rajahmundry, Andhra Pradesh to the world.
                 </p>
               </div>
             </div>
           </section>
 
           {/* Story Section */}
-          <section className="py-24 relative">
+          <section className="py-24 relative bg-white">
             <div className="container mx-auto px-4">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="animate-slide-in-left">
                   <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Story</span>
-                  <h2 className="font-display text-3xl md:text-4xl font-bold mt-4 mb-6">
+                  <h2 className="font-display text-3xl md:text-4xl font-bold mt-4 mb-6 text-foreground">
                     From Vision to <span className="text-gradient">Reality</span>
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      Founded in Andhra Pradesh, Aashvee Tech Solutions emerged from a bold vision: 
+                      Founded in Rajahmundry, Andhra Pradesh, Aashvee Tech Solutions emerged from a bold vision: 
                       to bring world-class AI and technology solutions to businesses across India and beyond.
                     </p>
                     <p>
@@ -68,7 +68,7 @@ const About = () => {
                       { icon: Award, value: '5+', label: 'Years' },
                       { icon: Rocket, value: '200+', label: 'Projects' },
                     ].map((stat, index) => (
-                      <div key={index} className="p-6 rounded-2xl glass text-center card-lift">
+                      <div key={index} className="p-6 rounded-2xl bg-white border border-border shadow-sm text-center card-lift">
                         <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                         <div className="font-display text-3xl font-bold text-gradient">{stat.value}</div>
                         <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -81,8 +81,8 @@ const About = () => {
           </section>
 
           {/* Mission, Vision, Values */}
-          <section className="py-24 relative bg-card/30">
-            <div className="absolute inset-0 dot-pattern opacity-20" />
+          <section className="py-24 relative bg-muted/30">
+            <div className="absolute inset-0 dot-pattern opacity-30" />
             <div className="container mx-auto px-4 relative z-10">
               <div className="grid md:grid-cols-3 gap-8">
                 {[
@@ -96,30 +96,28 @@ const About = () => {
                     icon: Eye,
                     title: 'Our Vision',
                     description: 'To be the leading AI innovation hub in South India, transforming how businesses operate and compete in the digital age.',
-                    color: 'magenta',
+                    color: 'accent',
                   },
                   {
                     icon: Heart,
                     title: 'Our Values',
                     description: 'Innovation, integrity, and impact. We believe in creating technology that not only works but makes a meaningful difference.',
-                    color: 'accent',
+                    color: 'primary',
                   },
                 ].map((item, index) => (
                   <div
                     key={item.title}
-                    className="p-8 rounded-3xl glass text-center animate-fade-in-up card-lift"
+                    className="p-8 rounded-3xl bg-white border border-border shadow-sm text-center animate-fade-in-up card-lift"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center ${
-                      item.color === 'primary' ? 'bg-primary/20' :
-                      item.color === 'magenta' ? 'bg-ai-magenta/20' : 'bg-accent/20'
+                      item.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'
                     }`}>
                       <item.icon className={`w-8 h-8 ${
-                        item.color === 'primary' ? 'text-primary' :
-                        item.color === 'magenta' ? 'text-ai-magenta' : 'text-accent'
+                        item.color === 'primary' ? 'text-primary' : 'text-accent'
                       }`} />
                     </div>
-                    <h3 className="font-display text-xl font-bold mb-4">{item.title}</h3>
+                    <h3 className="font-display text-xl font-bold mb-4 text-foreground">{item.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 ))}
@@ -131,10 +129,10 @@ const About = () => {
           <TeamSection />
 
           {/* Why Choose Us */}
-          <section className="py-24 relative">
+          <section className="py-24 relative bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
                   Why Choose <span className="text-gradient">Aashvee Tech</span>?
                 </h2>
               </div>
@@ -146,11 +144,11 @@ const About = () => {
                   { title: 'End-to-End Solutions', desc: 'From strategy to implementation and support' },
                   { title: 'Proven Track Record', desc: 'Trusted by leading institutions and enterprises' },
                 ].map((item, index) => (
-                  <div key={index} className="p-6 rounded-2xl glass text-center animate-fade-in-up card-lift" style={{ animationDelay: `${index * 100}ms` }}>
-                    <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-ai-magenta flex items-center justify-center text-primary-foreground font-bold">
+                  <div key={index} className="p-6 rounded-2xl bg-white border border-border shadow-sm text-center animate-fade-in-up card-lift" style={{ animationDelay: `${index * 100}ms` }}>
+                    <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
                       {index + 1}
                     </div>
-                    <h3 className="font-display font-bold mb-2">{item.title}</h3>
+                    <h3 className="font-display font-bold mb-2 text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.desc}</p>
                   </div>
                 ))}
