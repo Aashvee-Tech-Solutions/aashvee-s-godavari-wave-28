@@ -38,7 +38,7 @@ const HeroSection = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground animate-fade-in-up delay-100">
               Building Things{' '}
               <span className="text-gradient">To Do</span>{' '}
-              in South India
+              in India
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl animate-fade-in-up delay-200">
