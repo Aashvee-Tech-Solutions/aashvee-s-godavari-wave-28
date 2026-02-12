@@ -1,6 +1,12 @@
-import { Building2, GraduationCap, Globe } from 'lucide-react';
+import { Building2, GraduationCap, Globe, Landmark } from 'lucide-react';
 
 const clients = [
+  {
+    name: 'AP Government',
+    type: 'Government',
+    icon: Landmark,
+    description: 'Andhra Pradesh State Government',
+  },
   {
     name: 'Ungaam',
     type: 'Enterprise',
@@ -52,7 +58,7 @@ const ClientsSection = () => {
         </div>
 
         {/* Clients Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {clients.map((client, index) => (
             <div
               key={client.name}
