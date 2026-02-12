@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo.jpg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,15 +38,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="font-display font-bold text-lg text-foreground group-hover:text-primary transition-colors">
-                Aashvee Tech
-              </h1>
-              <p className="text-xs text-primary font-medium">First AI Company in AP</p>
-            </div>
+            <img src={logo} alt="Aashvee Tech Solutions" className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
