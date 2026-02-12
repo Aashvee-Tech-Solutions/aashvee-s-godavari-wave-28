@@ -1,5 +1,6 @@
-import { Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowUp, Mail, Phone, MapPin, Sparkles } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '@/assets/logo.jpg';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -14,13 +15,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-display font-bold text-lg text-white">Aashvee Tech</h3>
-                <p className="text-xs text-primary font-medium">First AI Company in AP</p>
-              </div>
+              <img src={logo} alt="Aashvee Tech Solutions" className="h-14 w-auto rounded-lg bg-white p-1" />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Pioneering AI innovation in Andhra Pradesh. We transform businesses with 
